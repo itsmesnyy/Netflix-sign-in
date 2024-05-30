@@ -150,3 +150,17 @@ form .form-help :where(label,a){
 .form-wrapper a:hover{
     text-decoration: underline;
 }
+@media screen and (max-width: 768px) {
+    .form-wrapper {
+        width: 80%; /* Adjust width for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .form-wrapper h2 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    form button {
+        padding: 12px 0; /* Adjust button padding for smaller screens */
+    }
+}
