@@ -1,0 +1,152 @@
+/* Write CSS code here */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+body{
+    background-color: black;
+    position: relative;
+    min-height: 100vh;;
+}
+nav{
+    position: fixed;
+    z-index: 1;
+    padding: 25px 50px;
+}
+nav a img {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    filter: brightness(150%); /* Adjust brightness as needed */
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        left: 0; /* Position fixed navigation to the left */
+        padding: 7px 35px;
+    }
+
+    nav a img {
+        width: 150px; /* Adjust width for smaller screens */
+    }
+}
+body::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc(100% + 100px);
+    background-position: center;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f562aaf4-5dbb-4603-a32b-6ef6c2230136/dh0w8qv-9d8ee6b2-b41a-4681-ab9b-8a227560dc75.jpg/v1/fill/w_1280,h_720,q_75,strp/the_netflix_login_background__canada__2024___by_logofeveryt_dh0w8qv-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvZjU2MmFhZjQtNWRiYi00NjAzLWEzMmItNmVmNmMyMjMwMTM2XC9kaDB3OHF2LTlkOGVlNmIyLWI0MWEtNDY4MS1hYjliLThhMjI3NTYwZGM3NS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.LOYKSxIDqfPwWHR0SSJ-ugGQ6bECF0yO6Cmc0F26CQs");
+    opacity: 0.3;
+    z-index: -1;
+}
+#help-message {
+    margin-top: 30px; /* Adjust as needed */
+}
+.form-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: rgba(0,0,0,0.65);
+    transform: translate(-50%,-50%);
+    height: 500px;
+    width: 430px;
+    padding:60px;
+    border-radius: 6px;
+}
+.form-wrapper h2{
+    color: #fff;
+    font-size: 2rem;
+}
+.form-wrapper form{
+    margin: 25px 0 ;
+}
+form .form-control{
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+.form-control input{
+    height: 55px;
+    width: 100%;
+    background: #18181874;
+    outline: none;
+    border: 1px solid rgb(105, 105, 105);
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 20px 20px 15px;
+    padding-top: 30px;
+}
+.form-control label{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    color: #8c8c8c;
+    pointer-events: none;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+}
+.form-control input:is(:focus, :valid) ~ label{
+    font-size: 0.65rem;
+    transform: translateY(-130%);
+}
+.form-control input:focus {
+    border-color: #e50914;
+}
+form button{
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    background: #e50914;
+    margin: 10px 0 10px;
+    transition: 0.1s ease;
+}
+form button:hover{
+    background: #c40812;
+}
+form .form-help{
+    display: flex;
+    justify-content: space-between;
+}
+for .remember-me{
+    display: flex;
+    align-items: center;
+}
+form .remember-me input{
+    margin-right:5px;
+    accent-color:#b3b3b3;
+}
+form .form-help :where(label,a){
+    font-size: 0.9rem;
+}
+.form-wrapper :where(label,p,small,a){
+    color: #b3b3b3;
+}
+.form-wrapper p a{
+    color: #fff;
+}
+.form-wrapper small{
+    display: block;
+    margin-top: 15px;
+}
+.form-wrapper small a{
+    color: #0071eb;
+}
+.form-wrapper a{
+    text-decoration: none;
+}
+.form-wrapper a:hover{
+    text-decoration: underline;
+}
